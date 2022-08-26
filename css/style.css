@@ -2406,4 +2406,4 @@ button {
 a {
   color: #6492f6;
 }
-button:hover {opacity: 1}
+#submitBtn:hover {background-color: #bb0d0d;}
