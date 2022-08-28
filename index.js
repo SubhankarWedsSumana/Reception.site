@@ -31,7 +31,7 @@ const generatePDF = async (name) => {
   pdfDoc.registerFontkit(fontkit);
 
   //get font
-  const fontBytes = await fetch("./Sanchez-Regular.ttf").then((res) =>
+  const fontBytes = await fetch("./Tomatoes-O8L8.ttf").then((res) =>
     res.arrayBuffer()
   );
 
@@ -44,11 +44,11 @@ const generatePDF = async (name) => {
 
   // Draw a string of text diagonally across the first page
   firstPage.drawText(name, {
-    x: 330,
-    y: 420,
+    x: 230,
+    y: 269,
     size: 30,
     font: SanChezFont,
-    
+    color: rgb(0.8, 0.84, 0.67),
   });
 
   // Serialize the PDFDocument to bytes (a Uint8Array)
@@ -62,7 +62,7 @@ const generatePDF = async (name) => {
 
   var file = new File(
     [pdfBytes],
-    "Sumana & Subhankar Wedding Invitation Card.pdf",
+    "Subhankar & Sumana Reception Invitation Card.pdf",
     {
       type: "application/pdf;charset=utf-8",
     }
